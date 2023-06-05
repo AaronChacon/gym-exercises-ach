@@ -90,9 +90,20 @@ body {
   transform: scale(1.1, 1.1);
 }
 
+.search-btn {
+  background-color: #ff2625 !important;
+  color: #fff !important;
+}
+
 .search-btn:hover {
-  color: #ff2625 !important;
+  color: #fff !important;
+  background-color: #ff2625 !important;
   border: 1px solid #ff2625 !important;
+}
+
+.search-btn:disabled {
+  background-color: gray !important;
+  cursor: not-allowed !important;
 }
 
 .exercise-video {

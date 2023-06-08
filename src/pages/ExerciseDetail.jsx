@@ -33,7 +33,7 @@ const ExerciseDetail = () => {
         youtubeSearchOptions
       );
 
-      setExercisesVideos(exercisesVideoData);
+      setExercisesVideos(exercisesVideoData.contents);
     };
 
     fetchExercisesData();

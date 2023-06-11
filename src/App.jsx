@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import ExerciseDetail from "./pages/ExerciseDetail";
 import Home from "./pages/Home";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Box>
   );
 }

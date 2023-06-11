@@ -2,8 +2,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 
 const ExerciseVideos = ({ exercisesVideos, name }) => {
-  console.log(exercisesVideos?.slice(1, 4));
-
   if (!exercisesVideos?.length) return "Loading...";
 
   return (
@@ -36,12 +34,21 @@ const ExerciseVideos = ({ exercisesVideos, name }) => {
         {exercisesVideos?.slice(1, 4).map((item, index) => (
           <a
             key={`${item} - ${index}`}
-            href={`https://www.youtube.com/watch?v=${item.video.videoId}`}
+            href={`https://www.youtube.com/watch?v=${item?.video?.videoId}`}
             className="exercise-video"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={item.video.thumbnails[0].url} alt={item.video.title} />
+            <img src={item.video.thumbnails[0].url} alt={item?.video?.title} />
+
+            <Box>
+              <Typography variant="h5" color="#000">
+                {item?.video?.title}
+              </Typography>
+              <Typography variant="h6" color="#000">
+                {item?.video?.channelName}
+              </Typography>
+            </Box>
           </a>
         ))}
       </Stack>
